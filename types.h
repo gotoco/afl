@@ -40,11 +40,8 @@ typedef uint32_t u32;
 
  */
 
-#ifdef __x86_64__
-typedef unsigned long long u64;
-#else
-typedef uint64_t u64;
-#endif /* ^__x86_64__ */
+// typedef uint64_t u64;
+typedef unsigned long long  u64;
 
 typedef int8_t   s8;
 typedef int16_t  s16;

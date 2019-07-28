@@ -342,4 +342,17 @@
 
 // #define IGNORE_FINDS
 
+#if defined(__linux__)
+#define KERNEL_MODE_AFL  1
+#define KERNEL_MODE_KCOV 2
+
+/* Values stolen from the kernel headers files */
+#define AFL_CTL_ASSOC_AREA 42
+#define AFL_CTL_DISASSOC_AREA 43
+
+#define KCOV_INIT_TABLE     _IOR('c', 2, unsigned long)
+#define KCOV_ENABLE         _IO('c', 100)
+#define KCOV_DISABLE        _IO('c', 100)
+#endif
+
 #endif /* ! _HAVE_CONFIG_H */
